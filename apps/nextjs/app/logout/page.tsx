@@ -1,5 +1,5 @@
 import SignOutButton from "../../components/LogoutButton";
 
-export default function Page() {
+export default async function Page() {
   return <SignOutButton></SignOutButton>;
 }
