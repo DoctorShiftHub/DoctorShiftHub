@@ -1,10 +1,17 @@
 "use client";
+
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { httpBatchLink, loggerLink } from "@trpc/client";
+import { ReactNode, useState } from "react";
+
 import { createTRPCReact } from "@trpc/react-query";
-import { useState } from "react";
+import { AppRouter } from "packages/api";
 import superjson from "superjson";
-import type { AppRouter } from "@acme/api";
+import { getBaseUrl } from "../utils/trpc";
+
+interface ClientProviderProps {
+  children: ReactNode;
+}
 
 export const trpc = createTRPCReact<AppRouter>({
   unstable_overrides: {
@@ -16,22 +23,7 @@ export const trpc = createTRPCReact<AppRouter>({
     },
   },
 });
-
-function getBaseUrl() {
-  if (typeof window !== "undefined")
-    // browser should use relative path
-    return "";
-  if (process.env.VERCEL_URL)
-    // reference for vercel.com
-    return `https://${process.env.VERCEL_URL}`;
-  if (process.env.RENDER_INTERNAL_HOSTNAME)
-    // reference for render.com
-    return `http://${process.env.RENDER_INTERNAL_HOSTNAME}:${process.env.PORT}`;
-  // assume localhost
-  return `http://localhost:${process.env.PORT ?? 3000}`;
-}
-
-export function ClientProvider(props: { children: React.ReactNode }) {
+export default function ClientProvider(props: ClientProviderProps) {
   const [queryClient] = useState(() => new QueryClient());
   const [trpcClient] = useState(() =>
     trpc.createClient({
