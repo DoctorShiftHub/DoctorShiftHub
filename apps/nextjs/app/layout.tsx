@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <ClientProvider>
       <ClerkProvider>
-        <html lang="en">
+        <html lang="pt-br">
           <head>
             <title>Next.js 13 with Clerk</title>
           </head>
