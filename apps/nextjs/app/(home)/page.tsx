@@ -1,5 +1,6 @@
 "use client";
-import { trpc } from "../../utils/TrpcProvider";
+
+import { trpc } from "@/nextjs/utils/trpc";
 
 export default function Page() {
   const { data, status } = trpc.post.all.useQuery();
