@@ -1,14 +1,13 @@
 import { ReactNode } from "react";
 
 interface LogoutButtonProps {
-  children: ReactNode;
+  children?: ReactNode;
 }
 
-export default function LogoutButton({ children }: LogoutButtonProps) {
+export default function LogoutButton({}: LogoutButtonProps) {
   return (
     <>
       <h1>LogoutButton</h1>
-      {children}
     </>
   );
 }

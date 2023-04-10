@@ -1,5 +1,5 @@
-import SignOutButton from "../../components/LogoutButton";
+import { LogoutButton } from "@/nextjs/components/atoms";
 
 export default async function Page() {
-  return <SignOutButton></SignOutButton>;
+  return <LogoutButton></LogoutButton>;
 }
