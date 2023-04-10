@@ -1,5 +1,5 @@
+import Link from "next/link";
 import { ReactNode } from "react";
-
 interface HeaderProps {
   children?: ReactNode;
 }
@@ -7,7 +7,7 @@ interface HeaderProps {
 export default function Header({}: HeaderProps) {
   return (
     <header>
-      <div className="navbar bg-base-300 w-full px-0">
+      <div className="navbar bg-base-300 w-full px-2 md:px-4">
         <div className="flex-none lg:hidden">
           <label htmlFor="sideDrawer" className="btn btn-square btn-ghost">
             <svg
@@ -27,15 +27,15 @@ export default function Header({}: HeaderProps) {
         </div>
         <div className="flex-1">Navbar Title</div>
         <div className="hidden flex-none lg:block">
-          <ul className="menu menu-horizontal">
+          <div className="menu menu-horizontal btn-group">
             {/* <!-- Navbar menu content here --> */}
-            <li>
-              <a>Navbar Item 1</a>
-            </li>
-            <li>
-              <a>Navbar Item 2</a>
-            </li>
-          </ul>
+            <Link href="/feed" className="btn btn-ghost">
+              Feed
+            </Link>
+            <Link href="/feed" className="btn btn-ghost">
+              Agenda
+            </Link>
+          </div>
         </div>
       </div>
     </header>
