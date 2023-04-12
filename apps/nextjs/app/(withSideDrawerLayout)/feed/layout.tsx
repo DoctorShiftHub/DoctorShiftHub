@@ -8,7 +8,9 @@ export default function HomeLayout({
 }) {
   return (
     <div>
-      <div>'botões com opção 'Vagas' e 'Anunciar'</div>
+      <div>
+        botões com opção Vagas e Anunciar, anunciar que leva pra /feed/publish
+      </div>
       <div className="my-2 md:my-4">
         <Promoted />
       </div>
