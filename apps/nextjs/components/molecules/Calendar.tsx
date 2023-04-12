@@ -1,3 +1,4 @@
+"use client";
 import * as React from "react";
 import dayjs, { Dayjs } from "dayjs";
 import Badge from "@mui/material/Badge";
@@ -6,7 +7,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { PickersDay, PickersDayProps } from "@mui/x-date-pickers/PickersDay";
 import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import { DayCalendarSkeleton } from "@mui/x-date-pickers/DayCalendarSkeleton";
-
+import { useRouter } from "next/navigation";
 function getRandomNumber(min: number, max: number) {
   return Math.round(Math.random() * (max - min) + min);
 }
@@ -63,6 +64,7 @@ export default function DateCalendarPicker() {
   const [isLoading, setIsLoading] = React.useState(false);
   const [highlightedDays, setHighlightedDays] = React.useState([1, 2, 15]);
   const [dutyOfTheDay, setDutyOfTheDay] = React.useState<number[]>();
+  const router = useRouter();
 
   // adicionar a query no banco de dados e pegar a response que deve ser um array de dias.
   // Devemos criar um estado para pegar o mês que está selecionado e fazer a query no banco de dados
@@ -105,12 +107,13 @@ export default function DateCalendarPicker() {
   };
 
   const handleDayChange = (date: Dayjs | any) => {
-    console.log(date.date());
     if (date.date() === 1) {
       setDutyOfTheDay([1, 2, 3]);
     } else {
       setDutyOfTheDay([]);
     }
+    const formattedDate = date.format("YYYY-MM-DD");
+    router.replace(`/agenda?date=${formattedDate}`);
   };
   return (
     <div>
