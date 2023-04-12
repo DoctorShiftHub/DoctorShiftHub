@@ -15,7 +15,7 @@ export default function Page() {
       {Array.from({ length: 10 }).map((_, i) => (
         <div
           key={i}
-          className="card card-compact md:card-normal dark:bg-neutral dark:text-neutral-content scroll-smooth shadow dark:shadow-none"
+          className="card card-compact card-bordered md:card-normal dark:bg-neutral dark:text-neutral-content scroll-smooth dark:shadow-none"
           style={{
             scrollSnapType: "x mandatory",
           }}

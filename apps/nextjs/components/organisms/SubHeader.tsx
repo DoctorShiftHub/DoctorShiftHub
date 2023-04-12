@@ -26,7 +26,7 @@ export default function SubHeader({}: SubHeaderProps) {
           {Array.from({ length: 10 }).map((_, i) => (
             <div
               key={i}
-              className="card card-bordered card-side card-compact md:card-normal bg-primary text-primary-content shadow dark:shadow-none"
+              className="card card-bordered card-side card-compact bg-primary text-primary-content dark:shadow-none"
             >
               <div className="text-secondary flex h-full flex-col items-center justify-center gap-4 pl-2 text-2xl md:pl-4">
                 <RxSun />
