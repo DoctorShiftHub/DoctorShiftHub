@@ -9,7 +9,7 @@ interface SubHeaderProps {
 
 export default function SubHeader({}: SubHeaderProps) {
   return (
-    <div className="my-2">
+    <div className="my-2 md:my-4 ">
       <h2 className="text-secondary ml-2 mb-2 text-lg font-black md:ml-4">
         Vagas urgentes
       </h2>
