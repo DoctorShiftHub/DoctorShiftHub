@@ -19,7 +19,7 @@ export default function ScrollSubHeaderButton({}: ScrollSubHeaderButtonProps) {
   };
   return (
     <div
-      className="btn btn-xs glass no-animation absolute right-0 z-10 flex h-full items-center rounded-r-none"
+      className="btn btn-xs glass no-animation absolute right-0 z-10 flex h-full items-center rounded-r-none opacity-80"
       onClick={handleScroll}
     >
       <RxChevronRight />

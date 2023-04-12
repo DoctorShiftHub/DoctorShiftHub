@@ -5,6 +5,7 @@ import {
   RxLightningBolt,
   RxMoon,
   RxSewingPin,
+  RxSpaceBetweenHorizontally,
   RxSun,
 } from "react-icons/rx";
 
@@ -34,19 +35,25 @@ export default function Page() {
             <ul className="space-y-2">
               <li>
                 <div className="flex items-center gap-2">
-                  <RxSewingPin className="text-primary text-xl" />
+                  <RxSewingPin className="text-primary text-lg" />
                   <span>Hospital do Monte Castelo, Teresina - PI</span>
                 </div>
               </li>
               <li>
                 <div className="flex items-center gap-2">
-                  <RxCalendar className="text-primary text-xl" />
+                  <RxCalendar className="text-primary text-lg" />
                   <span>11/04/2023 - 19h~07h</span>
                 </div>
               </li>
               <li>
                 <div className="flex items-center gap-2">
-                  <RxLightningBolt className="text-primary text-xl" />
+                  <RxSpaceBetweenHorizontally className="text-primary text-lg" />
+                  <span>125 km</span>
+                </div>
+              </li>
+              <li>
+                <div className="flex items-center gap-2">
+                  <RxLightningBolt className="text-primary text-lg" />
                   <span>R$ 800,00</span>
                 </div>
               </li>
