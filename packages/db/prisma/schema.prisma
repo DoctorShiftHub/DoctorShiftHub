@@ -45,6 +45,7 @@ model Announcement {
     isAvailable          Boolean
     scheduleId           String
     schedule             Schedule @relation(fields: [scheduleId], references: [id])
+    @@index([scheduleId])
 }
 
 model Locale {
@@ -67,4 +68,6 @@ model PurchasesHistoric {
     user    User @relation(fields: [userId], references: [id])
     coins   Int
     date    DateTime
+
+    @@index([userId])
 }
