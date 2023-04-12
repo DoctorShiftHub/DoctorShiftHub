@@ -9,10 +9,8 @@ interface SubHeaderProps {
 
 export default function SubHeader({}: SubHeaderProps) {
   return (
-    <div className="my-2 md:my-4 ">
-      <h2 className="text-secondary ml-2 mb-2 text-lg font-black md:ml-4">
-        Vagas urgentes
-      </h2>
+    <div>
+      <h2 className="ml-2 mb-2 font-semibold md:ml-4">Vagas urgentes</h2>
       <div className="relative">
         <ScrollSubHeaderButton />
         <div
@@ -28,7 +26,7 @@ export default function SubHeader({}: SubHeaderProps) {
               key={i}
               className="card card-bordered card-side card-compact bg-primary text-primary-content dark:shadow-none"
             >
-              <div className="text-secondary flex h-full flex-col items-center justify-center gap-4 pl-2 text-2xl md:pl-4">
+              <div className="text-accent flex h-full flex-col items-center justify-center gap-4 pl-2 text-2xl md:pl-4">
                 <RxSun />
                 <RxMoon />
               </div>
@@ -39,7 +37,7 @@ export default function SubHeader({}: SubHeaderProps) {
                     Hospital do Monte Castelo, Teresina - PI
                   </p>
                 </div>
-                <button className="btn btn-secondary btn-xs">Assumir</button>
+                <button className="btn btn-accent btn-xs">Assumir</button>
               </div>
             </div>
           ))}
