@@ -1,4 +1,4 @@
-import { SubHeader } from "@/nextjs/components/organisms";
+import { Promoted } from "@/nextjs/components/organisms";
 import React from "react";
 
 export default function HomeLayout({
@@ -8,7 +8,12 @@ export default function HomeLayout({
 }) {
   return (
     <div>
-      <SubHeader />
+      <div>
+        botões com opção Vagas e Anunciar, anunciar que leva pra /feed/publish
+      </div>
+      <div className="my-2 md:my-4">
+        <Promoted />
+      </div>
       {children}
     </div>
   );
