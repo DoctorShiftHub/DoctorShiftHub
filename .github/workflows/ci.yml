@@ -57,8 +57,8 @@ jobs:
       - name: Build, lint and type-check
         run: pnpm turbo build lint type-check
 
-      - name: Check workspaces
-        run: pnpm manypkg check
-
       - name: Fix lint errors
         run: pnpm manypkg fix
+
+      - name: Check workspaces
+        run: pnpm manypkg check
