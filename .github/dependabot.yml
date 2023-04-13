@@ -26,3 +26,4 @@ updates:
     directory: "/packages/db"
     schedule:
       interval: "weekly"
+
