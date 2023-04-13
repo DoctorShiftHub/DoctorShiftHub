@@ -32,7 +32,7 @@ export default function Header({}: HeaderProps) {
             <Link href="/feed" className="btn btn-ghost">
               Feed
             </Link>
-            <Link href="/feed" className="btn btn-ghost">
+            <Link href="/agenda" className="btn btn-ghost">
               Agenda
             </Link>
           </div>
