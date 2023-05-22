@@ -20,7 +20,7 @@
     "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.28.0",
     "prettier": "^2.8.7",
-    "prettier-plugin-tailwindcss": "^0.2.7",
+    "prettier-plugin-tailwindcss": "^0.3.0",
     "renovate": "^35.46.0",
     "turbo": "^1.8.8",
     "typescript": "^5.0.4"
